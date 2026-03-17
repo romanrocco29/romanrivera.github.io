@@ -811,8 +811,8 @@
     <div class="about-text reveal">
       <p>
         I'm <strong>Roman Rivera</strong>, a B.S. Accounting student at Stevens Institute of Technology 
-        with a clear goal: becoming a CPA and building a career at the intersection of 
-        <strong>finance and strategy</strong> on Wall Street.
+        with a clear goal: becoming a CPA and building a career using <strong>accounting and strategy 
+        to optimize financial performance</strong> for firms across private equity, asset management, and forensic accounting.
       </p>
       <p>
         My background spans financial systems, investment strategy, and quantitative analysis — 
@@ -937,7 +937,7 @@
   <div class="edu-grid">
     <div class="edu-card reveal">
       <div class="edu-school">Stevens Institute of Technology</div>
-      <div class="edu-degree">B.S. Accounting · Expected 2029</div>
+      <div class="edu-degree">B.S. Accounting · Expected 2029 · GPA 3.7</div>
       <div class="edu-detail">
         Hoboken, NJ<br><br>
         <strong style="color:var(--white);">Relevant Coursework:</strong><br>
@@ -992,10 +992,9 @@
       <div class="skill-group reveal">
         <div class="skill-group-title">AI & Productivity</div>
         <ul class="skill-list">
-          <li>Claude Code (Agentic AI Workflows)</li>
-          <li>Claude & ChatGPT (Applied)</li>
+          <li>Claude Code</li>
+          <li>Claude & ChatGPT</li>
           <li>AI-Augmented Financial Analysis</li>
-          <li>Workflow Automation</li>
           <li>AI/ML Concepts (Coursework)</li>
           <li>Accuracy & Efficiency Optimization</li>
         </ul>
@@ -1018,14 +1017,14 @@
       <div class="ach-detail">Soccer · 2024–25</div>
     </div>
     <div class="ach-card reveal">
-      <span class="ach-icon">⭐</span>
-      <div class="ach-title">First Team All-Delco</div>
-      <div class="ach-detail">Soccer · 2024–25</div>
+      <span class="ach-icon">📚</span>
+      <div class="ach-title">Stevens Dean's List</div>
+      <div class="ach-detail">2026</div>
     </div>
     <div class="ach-card reveal">
-      <span class="ach-icon">🥇</span>
-      <div class="ach-title">First Team All-Mainline</div>
-      <div class="ach-detail">Soccer · 2024–25</div>
+      <span class="ach-icon">🎖️</span>
+      <div class="ach-title">National Honor Society</div>
+      <div class="ach-detail">Member · Radnor H.S.</div>
     </div>
     <div class="ach-card reveal">
       <span class="ach-icon">🎯</span>
@@ -1103,7 +1102,7 @@
   <span class="footer-mark">R<span>.</span>Rivera</span>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
   // Cursor
   const cursor = document.getElementById('cursor');
   const ring = document.getElementById('cursorRing');
@@ -1135,4 +1134,14 @@
       }
     });
   }, { threshold: 0.1 });
-  reveals.forEach(el 
+  reveals.forEach(el => observer.observe(el));
+
+  // Hero reveals on load
+  setTimeout(() => {
+    document.querySelectorAll('.hero .reveal').forEach((el, i) => {
+      setTimeout(() => el.classList.add('visible'), 200 + i * 200);
+    });
+  }, 100);
+</script>
+</body>
+</html>
